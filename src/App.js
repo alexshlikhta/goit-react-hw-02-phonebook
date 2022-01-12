@@ -1,10 +1,10 @@
-import './App.css';
+import './App.scss';
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
 import Filter from './components/Filter';
 import ContactForm from './components/ContactForm';
 import ContactList from './components/ContactList';
-
+import Container from './components/Container';
 export default class App extends Component {
 	state = {
 		contacts: [],
@@ -46,15 +46,19 @@ export default class App extends Component {
 
 		return (
 			<>
-				<h1>Phonebook</h1>
+				<Container>
+					<h1>Phonebook</h1>
 
-				<ContactForm onSubmit={this.handleSubmit} />
+					<ContactForm onSubmit={this.handleSubmit} />
+				</Container>
 
-				<h2>Contacts</h2>
+				<Container>
+					<h1>Contacts</h1>
 
-				<Filter filter={filter} onChange={this.searchContact} />
+					<Filter filter={filter} onChange={this.searchContact} />
 
-				<ContactList filteredContacts={this.filteredContacts()} handleClick={this.handleDeleteItem} />
+					<ContactList filteredContacts={this.filteredContacts()} handleClick={this.handleDeleteItem} />
+				</Container>
 			</>
 		);
 	}

@@ -5,7 +5,7 @@ const ContactsList = ({ filteredContacts, handleClick }) => {
 		<ul>
 			{filteredContacts.map((el, index) => (
 				<li id={el.id} key={index}>
-					{el.name}:{el.number}
+					{el.name}:<span>{el.number}</span>
 					<button onClick={handleClick}>Delete</button>
 				</li>
 			))}
