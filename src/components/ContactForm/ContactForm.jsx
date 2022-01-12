@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import s from './contactForm.module.scss';
 export default class ContactForm extends Component {
 	state = {
 		name: '',

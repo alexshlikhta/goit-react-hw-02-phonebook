@@ -1,4 +1,5 @@
 import React from 'react';
+import s from './contactList.module.scss';
 
 const ContactsList = ({ filteredContacts, handleClick }) => {
 	return (
